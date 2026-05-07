@@ -1,0 +1,40 @@
+{
+  "name": "Genealogia Brenig – Stammbaum",
+  "short_name": "Brenig",
+  "description": "Interaktiver Stammbaum der Familie Brenig – von den Merowingern bis Jennifer Brenig (1988)",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0E0704",
+  "theme_color": "#0E0704",
+  "lang": "de",
+  "categories": ["genealogy", "history", "education"],
+  "icons": [
+    {
+      "src": "icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

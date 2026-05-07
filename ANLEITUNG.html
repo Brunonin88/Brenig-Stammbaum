@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Installationsanleitung – Genealogia Brenig App</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
+  :root { --bg:#0E0704; --gold:#C9A32A; --cream:#EDD9A3; --muted:#8A7050; --border:#4A2C14; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--cream); font-family: 'Crimson Text', serif; 
+         min-height: 100vh; padding: 40px 24px; line-height: 1.7; }
+  h1 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.8rem; 
+       letter-spacing: 3px; margin-bottom: 8px; }
+  h2 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.1rem; 
+       letter-spacing: 2px; margin: 32px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  .subtitle { color: var(--muted); font-style: italic; font-size: 1.1rem; margin-bottom: 32px; }
+  .method { background: rgba(201,163,42,0.05); border: 1px solid var(--border); 
+            border-left: 3px solid var(--gold); padding: 20px 24px; margin: 16px 0; border-radius: 2px; }
+  .method h3 { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 1.5px; 
+               color: var(--gold); margin-bottom: 10px; }
+  .step { display: flex; gap: 14px; margin: 10px 0; align-items: flex-start; }
+  .num { background: var(--gold); color: var(--bg); font-family: 'Cinzel', serif; 
+         font-weight: 700; font-size: 0.8rem; min-width: 26px; height: 26px; 
+         display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
+  .badge { display: inline-block; background: var(--gold); color: var(--bg); font-family: 'Cinzel', serif;
+           font-size: 0.7rem; letter-spacing: 1px; padding: 2px 8px; margin-left: 8px; border-radius: 2px; }
+  .badge.alt { background: rgba(201,163,42,0.2); color: var(--gold); border: 1px solid var(--gold); }
+  .tip { background: rgba(255,255,255,0.03); border: 1px solid var(--border); 
+         padding: 14px 18px; margin: 20px 0; font-style: italic; color: var(--muted); border-radius: 2px; }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
+  .footer { color: var(--muted); font-size: 0.9rem; font-style: italic; margin-top: 40px; }
+  code { background: rgba(201,163,42,0.1); color: var(--gold); padding: 2px 6px; 
+         font-family: monospace; font-size: 0.9em; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<h1>GENEALOGIA BRENIG</h1>
+<p class="subtitle">Installationsanleitung für Android &amp; Desktop</p>
+
+<h2>METHODE 1: PWA – Direkt auf Android installieren</h2>
+<p style="margin-bottom:16px">Die empfohlene Methode – keine App-Store-Freigabe nötig. <strong>Funktioniert offline</strong> nach dem ersten Laden.</p>
+
+<div class="method">
+  <h3>📱 ANDROID (Chrome) <span class="badge">Empfohlen</span></h3>
+  <div class="step"><div class="num">1</div><div>Die <code>index.html</code> auf einen Webserver laden (z.B. <a href="https://netlify.com" target="_blank">Netlify Drop</a> – einfach den Ordner per Drag &amp; Drop hochladen, kostenlos)</div></div>
+  <div class="step"><div class="num">2</div><div>Die URL in Chrome auf deinem Android-Gerät öffnen</div></div>
+  <div class="step"><div class="num">3</div><div>Oben rechts das ⋮ Menü öffnen → <strong>„Zum Startbildschirm hinzufügen"</strong></div></div>
+  <div class="step"><div class="num">4</div><div>Auf <strong>„Installieren"</strong> tippen → App erscheint wie eine native App im Launcher</div></div>
+  <div class="step"><div class="num">5</div><div>Beim nächsten Start: <strong>vollständig offline nutzbar</strong> (D3.js + Schriften werden beim Erstaufruf gecacht)</div></div>
+</div>
+
+<div class="method">
+  <h3>🖥️ DESKTOP (Chrome/Edge)</h3>
+  <div class="step"><div class="num">1</div><div>Gleiche URL im Browser öffnen</div></div>
+  <div class="step"><div class="num">2</div><div>In der Adressleiste das ⊞ oder 💾 Symbol klicken → <strong>„Genealogia Brenig installieren"</strong></div></div>
+</div>
+
+<hr class="divider">
+
+<h2>METHODE 2: Echte APK-Datei erstellen <span class="badge alt">Fortgeschritten</span></h2>
+<p style="margin-bottom:16px">Wenn du eine echte <code>.apk</code> Datei möchtest (z.B. zum direkten Teilen):</p>
+
+<div class="method">
+  <h3>🔧 Via PWABuilder (kostenlos, online)</h3>
+  <div class="step"><div class="num">1</div><div>App zuerst per Netlify veröffentlichen (wie oben)</div></div>
+  <div class="step"><div class="num">2</div><div><a href="https://www.pwabuilder.com" target="_blank">pwabuilder.com</a> öffnen → URL eingeben</div></div>
+  <div class="step"><div class="num">3</div><div><strong>Android</strong> auswählen → <strong>„Build App"</strong> → <code>.apk</code> herunterladen</div></div>
+  <div class="step"><div class="num">4</div><div>Auf Android-Gerät: Einstellungen → Sicherheit → <strong>„Unbekannte Quellen erlauben"</strong> → APK installieren</div></div>
+</div>
+
+<div class="method">
+  <h3>📦 Via WebViewGold oder DioApp (kostenpflichtig)</h3>
+  <p>Diese Tools verpacken deine HTML-Seite in eine vollständige native Android-App mit Play-Store-Unterstützung.</p>
+</div>
+
+<hr class="divider">
+
+<h2>INHALT DIESES PAKETS</h2>
+<div class="tip">
+  <strong>index.html</strong> – Die vollständige interaktive App (D3.js Stammbaum)<br>
+  <strong>manifest.json</strong> – PWA-Konfiguration (Icon, Name, Vollbild-Modus)<br>
+  <strong>sw.js</strong> – Service Worker für Offline-Nutzung<br>
+  <strong>icon.svg / icon-192.svg / icon-512.svg</strong> – App-Icons
+</div>
+
+<div class="tip" style="margin-top:12px">
+  💡 <strong>Tipp Netlify Drop:</strong> Gehe zu <a href="https://app.netlify.com/drop" target="_blank">app.netlify.com/drop</a> → ziehe den gesamten Ordner <em>brenig-app</em> in das Browserfenster → du erhältst sofort eine URL wie <code>brenig-stammbaum.netlify.app</code>. Kostenlos, kein Account nötig.
+</div>
+
+<p class="footer">Genealogia Merowingorum, Ottonum, Ezzonum, Brunonum &amp; Brenig — Generation 1–47</p>
+
+</body>
+</html>
